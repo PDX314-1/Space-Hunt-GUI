@@ -28,7 +28,8 @@ control_panel.rowconfigure(3,weight=1) # down
 control_panel.rowconfigure(4,weight=1) # current location
 control_panel.rowconfigure(5,weight=1) # energy
 control_panel.rowconfigure(6,weight=1) # supplies
-control_panel.rowconfigure(7,weight=3) # message
+control_panel.rowconfigure(7,weight=1) # money
+control_panel.rowconfigure(8,weight=3) # message
 
 control_panel.columnconfigure(0,weight=1)
 control_panel.columnconfigure(1,weight=3)
@@ -38,6 +39,7 @@ control_panel.columnconfigure(4,weight=3)
 control_panel.columnconfigure(5,weight=3)
 control_panel.columnconfigure(6,weight=3)
 control_panel.columnconfigure(7,weight=3)
+control_panel.columnconfigure(8,weight=3)
 
 
 # display Ship Identifier
@@ -67,10 +69,14 @@ supplies_label = tkinter.Label(control_panel,text="Supplies")
 supplies_label.grid(column=0,row=6)
 supplies_field = tkinter.Label(control_panel,text="100%")
 supplies_field.grid(column=1,row=6,sticky="W")
+money_label = tkinter.Label(control_panel,text="Money")
+money_label.grid(column=0,row=7)
+money_field = tkinter.Label(control_panel,text="1000")
+money_field.grid(column=1,row=7,sticky="W")
 message_label = tkinter.Label(control_panel,text="Message")
-message_label.grid(column=0,row=7)
+message_label.grid(column=0,row=8)
 message_field = tkinter.Label(control_panel,text="No current message")
-message_field.grid(column=1,row=7,sticky="W")
+message_field.grid(column=1,row=8,sticky="W")
 
 
 
