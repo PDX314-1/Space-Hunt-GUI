@@ -1,11 +1,14 @@
 import tkinter
 from tkinter import messagebox
 
+import shared_items
+
 
 def direction_click(direction):
    messagebox.showinfo("Info!","You Pushed "+direction)       #pop up alert box
    location_field.config(text=direction)                      #change text in current location display
    message_field.config(text="Someone's pushing my buttons!") #change the message display
+   # this would be a good place to call functions that process the move
    return
 
 # create pop-up window for supplemental information if needed
