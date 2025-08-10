@@ -27,6 +27,6 @@ def move_hero(angle_move, distance_move, game_state):
 
 def test_1():
     assert move_hero(0,1,{'x':10, 'y':0, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'&&&'}) == \
-   {'x':14, 'y':0, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'***'}
+   {'x':15, 'y':0, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'&&&'}
 
 
