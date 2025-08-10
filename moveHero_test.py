@@ -1,4 +1,4 @@
-import pytest
+#import pytest
 import shared_items
 def move_hero(angle_move, distance_move, game_state):
     """Moves the hero and updates the game state"""
@@ -26,7 +26,17 @@ def move_hero(angle_move, distance_move, game_state):
 #print(move_hero(0,5,{'x':10, 'y':8, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'&&&'}))
 
 def test_1():
-    assert move_hero(0,1,{'x':10, 'y':0, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'&&&'}) == \
-   {'x':15, 'y':0, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'&&&'}
-
-
+    assert move_hero(0,5,{'x':25, 'y':25, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'&&&'}) == \
+   {'x':30, 'y':25, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'&&&'}
+ 
+ def test_2():
+    assert move_hero(90,5,{'x':25, 'y':25, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'&&&'}) == \
+   {'x':25, 'y':30, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'+++'}
+    
+def test_3():
+    assert move_hero(180,5,{'x':25, 'y':25, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'&&&'}) == \
+   {'x':20, 'y':25, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'+++'}
+    
+def test_4():
+    assert move_hero(270,5,{'x':25, 'y':25, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'&&&'}) == \
+   {'x':25, 'y':20, 'energy':1000, 'supplies': 100, 'money':1000, 'message':'+++'}
